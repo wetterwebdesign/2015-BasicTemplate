@@ -22,6 +22,21 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  
+	if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'one-third', 370 );
+	add_image_size( 'one-half', 570 );
+	}
+	add_filter('image_size_names_choose', 'my_image_sizes');
+	function my_image_sizes($sizes) {
+	$addsizes = array(
+	"one-half" => __( "One Half"),
+	"one-third" => __( "One Third")
+	);
+	$newsizes = array_merge($sizes, $addsizes);
+	return $newsizes;
+	}
+
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
@@ -41,8 +56,44 @@ add_action('after_setup_theme', 'roots_setup');
  */
 function roots_widgets_init() {
   register_sidebar(array(
+    'name'          => __('Logo', 'roots'),
+    'id'            => 'sidebar-logo',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
     'name'          => __('Primary', 'roots'),
     'id'            => 'sidebar-primary',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+  
+  register_sidebar(array(
+    'name'          => __('Top Bar Left Social Media', 'roots'),
+    'id'            => 'sidebar-top-bar-left-social-media',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+  
+  register_sidebar(array(
+    'name'          => __('Top Bar Left', 'roots'),
+    'id'            => 'sidebar-top-bar-left',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+  
+  register_sidebar(array(
+    'name'          => __('Top Bar Right', 'roots'),
+    'id'            => 'sidebar-top-bar-right',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
@@ -57,5 +108,7 @@ function roots_widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
   ));
+
 }
+
 add_action('widgets_init', 'roots_widgets_init');

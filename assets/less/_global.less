@@ -1,0 +1,210 @@
+
+body {
+	color:@brand-dark;
+	font:@fontfam-body;
+}
+
+.clear { clear:both; }
+
+/* ---- CONTENT STYLES --- */
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family:@fontfam;
+	font-weight:800;
+	margin:0 0 20px;
+}
+
+h1 {
+	color:@brand-primary;
+	font-size:38px;
+	margin-bottom:40px;
+}
+
+h2 {
+	font-size:28px;
+}
+
+.button-row {
+	margin-bottom:30px;
+}
+
+a.btn {
+
+}
+
+/* ---- TOP BAR --- */
+
+.top-bar {
+	background:@brand-dark;
+	color:@brand-light;
+	
+	.container {
+		line-height:30px;
+		padding:5px 0;
+		
+		p {
+			margin:0;
+		}
+		
+		a {
+			color:#FFF;
+		}
+		
+		.social-media {
+			display:inline-block;
+			float:left;
+			font-size:30px;
+			line-height:30px;
+			padding-right:15px;
+		}
+		
+		.top-bar-left-content {
+			display:inline-block;
+			float:left;
+			padding-right:15px;
+		}
+		
+		.contact-info {
+			position:relative;
+			text-align:right;
+			
+			h1 {
+				background:@brand-highlight;
+				color:@brand-light;
+				display:block;
+				font-weight:bold;
+				font-size:30px;
+				margin:0;
+				padding:10px 20px;
+				position:absolute;
+				top:-5px;
+				right:0;
+			}
+		}
+	}
+}
+
+/* ---- HEADER --- */
+
+.logo {
+	padding: 15px 0;
+	text-align:center;
+	
+	img {
+		max-height:180px;
+		max-width:90%;
+		height:auto;
+		width:auto;
+	}
+}
+
+.navigation-container {
+	background:@brand-primary;
+	padding:5px 0 0;
+	
+	.navbar-nav {
+		float:none;
+	}
+	
+	ul.navbar-nav {
+		display:table;
+		margin:0 auto;
+		
+		li {
+			a {
+				color:@brand-light;
+				font-size:18px;
+				font-weight:bold;
+				padding:25px 15px;
+				text-transform:uppercase;
+			}
+		}
+		
+		li.active {
+			background:none;
+			border-top:5px solid @brand-highlight;
+			margin-top:-5px;
+		
+			a {
+				background:none;
+				color:@brand-light;
+				opacity:0.7;
+			}
+			
+			a:hover {
+				background:none;
+				color:@brand-light;
+				opacity:0.7;
+			}
+		}
+			
+		li:hover {
+			background:none;
+			border-top:5px solid @brand-highlight;
+			margin-top:-5px;
+		
+			a {
+				background:none;
+				color:@brand-light;
+				opacity:0.7;
+			}
+		}
+		
+	}
+}
+
+/* ---- SLIDER --- */
+
+.royalSlider.rs-default-template {
+	font-size:16px;
+	margin-bottom:30px;
+	
+	h3 {
+		font-weight:bold;
+	}
+	
+	a {
+		color:@brand-light;
+		text-decoration:underline;
+		
+		&.btn {
+			background:@brand-highlight;
+			clear:left;
+			display:table;
+			font-size:18px;
+			margin-top:15px;
+			text-decoration:none;
+		
+			&:hover {
+				opacity:0.8;
+			}
+		}
+	}
+	
+	img {
+		float:right;
+		width:60% !important;
+		height:auto !important;
+	}
+	
+	.rsSBlock {
+		float:left;
+		height:auto !important;
+		left:0 !important;
+		margin: 40px 0 0 45px;
+		padding-right:15px;
+		position:relative !important;
+		top:0 !important;
+		width:35% !important;
+	}
+	
+	.rsBullets {
+		margin-top:-30px !important;
+	}
+}
+
