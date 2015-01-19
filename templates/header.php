@@ -1,8 +1,9 @@
+<div class="overflow-container">
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="top-bar">
   	<div class="container">
     	<div class="row">
-        	<div class="col-md-6">
+        	<div class="col-md-6 mob-padd">
             	<div class="social-media"><?php dynamic_sidebar('sidebar-top-bar-left-social-media'); ?></div>
                 <div class="top-bar-left-content"><?php dynamic_sidebar('sidebar-top-bar-left'); ?></div>
                 <div class="clear"></div>
@@ -21,10 +22,7 @@
     <div class="row">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <div class="mobile-menu"><span class="menu-ico">&#xf0c9;</span> MENU</div>
           </button>
         </div>
     
